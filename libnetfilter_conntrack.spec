@@ -4,7 +4,7 @@
 #
 Name     : libnetfilter_conntrack
 Version  : 1.0.5
-Release  : 6
+Release  : 7
 URL      : http://ftp.netfilter.org/pub/libnetfilter_conntrack/libnetfilter_conntrack-1.0.5.tar.bz2
 Source0  : http://ftp.netfilter.org/pub/libnetfilter_conntrack/libnetfilter_conntrack-1.0.5.tar.bz2
 Summary  : netfilter userspace conntrack access library
