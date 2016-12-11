@@ -4,7 +4,7 @@
 #
 Name     : libnetfilter_conntrack
 Version  : 1.0.6
-Release  : 10
+Release  : 11
 URL      : http://ftp.netfilter.org/pub/libnetfilter_conntrack/libnetfilter_conntrack-1.0.6.tar.bz2
 Source0  : http://ftp.netfilter.org/pub/libnetfilter_conntrack/libnetfilter_conntrack-1.0.6.tar.bz2
 Summary  : netfilter userspace conntrack access library
@@ -70,9 +70,10 @@ rm -rf %{buildroot}
 /usr/include/libnetfilter_conntrack/libnetfilter_conntrack_tcp.h
 /usr/include/libnetfilter_conntrack/libnetfilter_conntrack_udp.h
 /usr/include/libnetfilter_conntrack/linux_nfnetlink_conntrack.h
-/usr/lib64/*.so
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/libnetfilter_conntrack.so
+/usr/lib64/pkgconfig/libnetfilter_conntrack.pc
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/*.so.*
+/usr/lib64/libnetfilter_conntrack.so.3
+/usr/lib64/libnetfilter_conntrack.so.3.6.0
