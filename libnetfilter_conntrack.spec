@@ -6,7 +6,7 @@
 #
 Name     : libnetfilter_conntrack
 Version  : 1.0.7
-Release  : 17
+Release  : 18
 URL      : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2
 Source0  : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2
 Source99 : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2.sig
