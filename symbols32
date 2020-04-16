@@ -1,7 +1,7 @@
+libnetfilter_conntrack.so.3:__abi_breakage
 libnetfilter_conntrack.so.3:__build_conntrack
 libnetfilter_conntrack.so.3:__build_expect
 libnetfilter_conntrack.so.3:__build_filter_dump
-libnetfilter_conntrack.so.3:__build_tuple
 libnetfilter_conntrack.so.3:__callback
 libnetfilter_conntrack.so.3:__cmp_expect
 libnetfilter_conntrack.so.3:__cmp_orig
@@ -14,11 +14,6 @@ libnetfilter_conntrack.so.3:__labelmap_get_bit
 libnetfilter_conntrack.so.3:__labelmap_get_name
 libnetfilter_conntrack.so.3:__labelmap_new
 libnetfilter_conntrack.so.3:__labels_get_path
-libnetfilter_conntrack.so.3:__parse_conntrack
-libnetfilter_conntrack.so.3:__parse_expect
-libnetfilter_conntrack.so.3:__parse_expect_message_type
-libnetfilter_conntrack.so.3:__parse_message_type
-libnetfilter_conntrack.so.3:__parse_tuple
 libnetfilter_conntrack.so.3:__proto2str
 libnetfilter_conntrack.so.3:__setobjopt
 libnetfilter_conntrack.so.3:__setup_netlink_socket_filter

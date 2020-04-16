@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xAB4655A126D292E4 (coreteam@netfilter.org)
 #
 Name     : libnetfilter_conntrack
-Version  : 1.0.7
-Release  : 20
-URL      : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2
-Source0  : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2
-Source1 : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.7.tar.bz2.sig
+Version  : 1.0.8
+Release  : 21
+URL      : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.8.tar.bz2
+Source0  : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.8.tar.bz2
+Source1  : https://www.netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.8.tar.bz2.sig
 Summary  : netfilter userspace conntrack access library
 Group    : Development/Tools
 License  : GPL-2.0
@@ -79,9 +79,10 @@ license components for the libnetfilter_conntrack package.
 
 
 %prep
-%setup -q -n libnetfilter_conntrack-1.0.7
+%setup -q -n libnetfilter_conntrack-1.0.8
+cd %{_builddir}/libnetfilter_conntrack-1.0.8
 pushd ..
-cp -a libnetfilter_conntrack-1.0.7 build32
+cp -a libnetfilter_conntrack-1.0.8 build32
 popd
 
 %build
@@ -89,14 +90,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569529946
+export SOURCE_DATE_EPOCH=1587079340
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -120,10 +121,10 @@ cd ../build32;
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1569529946
+export SOURCE_DATE_EPOCH=1587079340
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libnetfilter_conntrack
-cp COPYING %{buildroot}/usr/share/package-licenses/libnetfilter_conntrack/COPYING
+cp %{_builddir}/libnetfilter_conntrack-1.0.8/COPYING %{buildroot}/usr/share/package-licenses/libnetfilter_conntrack/075d599585584bb0e4b526f5c40cb6b17e0da35a
 pushd ../build32/
 %make_install32
 if [ -d  %{buildroot}/usr/lib32/pkgconfig ]
@@ -171,4 +172,4 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/libnetfilter_conntrack/COPYING
+/usr/share/package-licenses/libnetfilter_conntrack/075d599585584bb0e4b526f5c40cb6b17e0da35a
