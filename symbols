@@ -8,6 +8,8 @@ libnetfilter_conntrack.so.3:__cmp_orig
 libnetfilter_conntrack.so.3:__compare
 libnetfilter_conntrack.so.3:__copy_fast
 libnetfilter_conntrack.so.3:__getobjopt
+libnetfilter_conntrack.so.3:__icmp_reply_type
+libnetfilter_conntrack.so.3:__icmpv6_reply_type
 libnetfilter_conntrack.so.3:__l3proto2str
 libnetfilter_conntrack.so.3:__labelmap_destroy
 libnetfilter_conntrack.so.3:__labelmap_get_bit
@@ -88,6 +90,7 @@ libnetfilter_conntrack.so.3:nfct_maxsize
 libnetfilter_conntrack.so.3:nfct_new
 libnetfilter_conntrack.so.3:nfct_nfnlh
 libnetfilter_conntrack.so.3:nfct_nlmsg_build
+libnetfilter_conntrack.so.3:nfct_nlmsg_build_filter
 libnetfilter_conntrack.so.3:nfct_nlmsg_parse
 libnetfilter_conntrack.so.3:nfct_open
 libnetfilter_conntrack.so.3:nfct_open_nfnl
